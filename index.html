@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hiragana Learning Site</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <h1>Welcome to Hiragana Practice!</h1>
+    <div id="category-selection">
+      <div>
+        <input type="checkbox" id="a-category" checked />
+        <label for="a-category">あ</label>
+      </div>
+      <div>
+        <input type="checkbox" id="ka-category" checked />
+        <label for="ka-category">か</label>
+      </div>
+      <div>
+        <input type="checkbox" id="sa-category" checked />
+        <label for="sa-category">さ</label>
+      </div>
+      <div>
+        <input type="checkbox" id="ta-category" checked />
+        <label for="ta-category">た</label>
+      </div>
+      <div>
+        <input type="checkbox" id="na-category" checked />
+        <label for="na-category">な</label>
+      </div>
+      <div>
+        <input type="checkbox" id="ha-category" checked />
+        <label for="ha-category">は</label>
+      </div>
+      <div>
+        <input type="checkbox" id="ma-category" checked />
+        <label for="ma-category">ま</label>
+      </div>
+      <div>
+        <input type="checkbox" id="ya-category" checked />
+        <label for="ya-category">や</label>
+      </div>
+      <div>
+        <input type="checkbox" id="ra-category" checked />
+        <label for="ra-category">ら</label>
+      </div>
+      <div>
+        <input type="checkbox" id="wa-category" checked />
+        <label for="wa-category">わ</label>
+      </div>
+      <!-- Additional Categories -->
+      <div>
+        <input type="checkbox" id="ga-category" checked />
+        <label for="ga-category">が</label>
+      </div>
+      <div>
+        <input type="checkbox" id="za-category" checked />
+        <label for="za-category">ざ</label>
+      </div>
+      <div>
+        <input type="checkbox" id="da-category" checked />
+        <label for="da-category">だ</label>
+      </div>
+      <div>
+        <input type="checkbox" id="ba-category" checked />
+        <label for="ba-category">ば</label>
+      </div>
+      <div>
+        <input type="checkbox" id="pa-category" checked />
+        <label for="pa-category">ぱ</label>
+      </div>
+      <div>
+        <label for="level">Level:</label>
+        <select id="level">
+          <option value="1">Easy</option>
+          <option value="2">Medium</option>
+          <option value="3">Hard</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="score-board">
+      <div id="streak">Streak: 0</div>
+      <div id="correct">Correct: 0</div>
+      <div id="incorrect">Incorrect: 0</div>
+    </div>
+    <div id="hiragana-grid"></div>
+    <button id="regenerate">Regenerate</button>
+    <div id="performance">
+      <div id="correct-percent">Correct: 0%</div>
+      <div id="incorrect-percent">Incorrect: 0%</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

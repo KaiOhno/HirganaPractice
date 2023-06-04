@@ -1,0 +1,214 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Style the checkboxes */
+#category-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#category-selection div {
+  margin: 10px;
+  width: calc(33.33% - 20px); /* Three checkboxes per row, adjust as needed */
+}
+
+#category-selection input[type='checkbox'] {
+  margin-right: 10px;
+}
+
+#category-selection label {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+#regenerate {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#regenerate:hover {
+  background-color: #45a049;
+  transform: translateX(-50%) scale(1.1);
+}
+
+#regenerate:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#performance {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+#correct-percent,
+#incorrect-percent {
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#correct-percent:before,
+#incorrect-percent:before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+#correct-percent:before {
+  background-color: #4caf50;
+}
+
+#incorrect-percent:before {
+  background-color: #ff5722;
+}
+
+#correct-percent:hover:before,
+#incorrect-percent:hover:before {
+  transform: scale(1.2);
+}
+
+#correct-percent:hover,
+#incorrect-percent:hover {
+  color: #555;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+/* Custom checkbox */
+input[type='checkbox'] + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+/* Custom checkbox after checking */
+input[type='checkbox']:checked + label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #4caf50;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+/* Style the label */
+input[type='checkbox'] + label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #4caf50;
+  box-sizing: border-box;
+}
+
+/* Hover state */
+input[type='checkbox']:hover:not(:disabled) + label::before {
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+/* Disabled state */
+input[type='checkbox']:disabled + label {
+  color: #b8b8b8;
+  cursor: not-allowed;
+}
+
+input[type='checkbox']:disabled + label::before {
+  border-color: #b8b8b8;
+  box-shadow: none;
+}
+
+/* The actual checkbox (hidden) */
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+#title {
+  text-align: center;
+  font-size: 2.5em;
+  padding: 20px;
+}
+
+#category-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+#category-selection div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#category-selection label {
+  margin-left: 5px;
+}
+
+#score-board {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+#hiragana-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.hiragana-cell {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.hiragana-cell:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.hiragana-cell input {
+  width: 90%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
